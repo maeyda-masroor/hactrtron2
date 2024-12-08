@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link";
+import dummyData from "@/app/data/dummydata";
 import React from "react";
 import Slider from "react-slick"; // Import react-slick
 import "slick-carousel/slick/slick.css"; // Import Slick CSS
@@ -21,7 +22,7 @@ const categories: Category[] = [
    
 ];
 const Products: React.FC = () => {
-    const sliderSettings = {
+  const sliderSettings = {
       dots: true, // Pagination dots
       infinite: true, // Infinite scrolling
       speed: 500, // Transition speed
@@ -45,15 +46,15 @@ const Products: React.FC = () => {
       </div>
       <div className="lg:block pt-10 slider-container mx-auto p-2 sm:pl-10">
       <Slider {...sliderSettings}>
-          {categories.map((c) => (
+          {dummyData.categories.map((c) => (
             <div key={c.id}>
               <div className="w-[269px] h-[345px] bg-white group relative mx-auto">
                 <Image src={c.image} alt="c" width={225} height={225} className="p-2 rounded-full"/>
              <div className="h-auto">
-              <h3 className="hover:text-pink text-gray-800">{c.title}</h3>
+              <h3 className="hover:text-pink text-gray-800">{c.name}</h3>
               <p className="text-black">{c.price}</p>
               <Link href={`/category/${c.id}`}>
-                <button className="underline decoration-2 decoration-blue">Read More</button>
+                <p className="underline decoration-2 decoration-blue">Read More</p>
               </Link>
              </div>
             </div>
