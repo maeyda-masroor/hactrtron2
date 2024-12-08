@@ -23,7 +23,7 @@ export default function Navbar() {
             <li><Link href="/blog">BLog</Link></li>
             <li><Link href="/shop">Shop</Link></li>
             <li><Link href="/contact">Contact</Link></li>
-         
+            <li><Link href="/about">About</Link></li>
           </ul>
           {/* Search Bar */}
           <div className="search-bar flex justify-center lg:justify-end">

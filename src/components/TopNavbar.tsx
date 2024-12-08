@@ -1,6 +1,7 @@
 import Image from "next/image";
 import EMAIL from '../public/uil_envelope-alt.png';
 import PHONE from '../public/bx_bx-phone-call.png';
+import Link from "next/link";
 export default function TopHeader() {
   return (
     <header className="w-full bg-violet lg:pl-56 lg:pr-56">
@@ -39,7 +40,7 @@ export default function TopHeader() {
             <span className="mr-2"><Image src={PHONE} alt="phone" width={25} height={25}/> </span>
             Wishlist
           </li>
-          <li><Image src={PHONE} alt="phone" width={25} height={25}/></li>
+          <Link href='/cart'><li><Image src={PHONE} alt="phone" width={25} height={25}/></li></Link>
           </ul>
         </div>
       </div>
