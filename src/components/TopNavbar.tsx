@@ -1,6 +1,9 @@
 import Image from "next/image";
 import EMAIL from '../public/uil_envelope-alt.png';
 import PHONE from '../public/bx_bx-phone-call.png';
+import CART from '../public/fluent_cart-24-regular.png';
+import HEART from '../public/uil_heart-alt.png';
+import Profile from '../public/user.png';
 import Link from "next/link";
 export default function TopHeader() {
   return (
@@ -33,14 +36,14 @@ export default function TopHeader() {
           </select>
           <ul className="flex text-white">
           <li className="py-2 flex items-center">
-            <span className="mr-2"><Image src={PHONE} alt="phone" width={25} height={25}/> </span>
+            <span className="mr-2"><Image src={Profile} alt="phone" width={25} height={25}/> </span>
             Login
           </li>
           <li className="py-2 flex items-center">
-            <span className="mr-2"><Image src={PHONE} alt="phone" width={25} height={25}/> </span>
+            <span className="mr-2"><Image src={HEART} alt="phone" width={25} height={25}/> </span>
             Wishlist
           </li>
-          <Link href='/cart'><li><Image src={PHONE} alt="phone" width={25} height={25}/></li></Link>
+          <Link href='/cart'><li><Image src={CART} alt="phone" width={25} height={25}/></li></Link>
           </ul>
         </div>
       </div>

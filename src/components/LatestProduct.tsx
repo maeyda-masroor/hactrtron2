@@ -6,6 +6,9 @@ import Image from "next/image";
 import Sale from '../public/Group 153.png';
 import wish from '../public/Group 162.png';
 import cart from '../public/Group 27.png';
+import HEART from '../public/uil_heart-alt.png';
+import Cart from "../public/fluent_cart-24-regular.png";
+import MAGNIFY from '../public/uil_search-plus.png';
 import magnify from '../public/Group 28.png';
 type Product = {
   id: number;
@@ -65,9 +68,9 @@ const TabbedGrid = () => {
                     <br/>
                     <br/>
                     <br/>
-                    <Image src={wish} alt="c"width={15} height={15}/>
+                    <Image src={HEART} alt="c"width={15} height={15}/>
                     <Image src={cart} alt="c"width={15} height={15}/>
-                    <Image src={magnify} alt="x" width={15} height={15}/>
+                    <Image src={MAGNIFY} alt="x" width={15} height={15}/>
                 </div>
                 </div>
                 <div className="">

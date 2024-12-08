@@ -6,6 +6,9 @@ import "slick-carousel/slick/slick.css"; // Import Slick CSS
 import "slick-carousel/slick/slick-theme.css"; // Import Slick Theme
 import Image from "next/image";
 import P1 from '../public/image 1.png';
+import CART from '../public/fluent_cart-24-regular.png';
+import Heart from '../public/uil_heart-alt.png';
+import magnify from '../public/uil_search-plus (1).png';
 type Product = {
   id: number;
   name: string;
@@ -57,9 +60,9 @@ const Products: React.FC = () => {
               <div className=" bg-white shadow-md rounded-lg transition-shadow duration-300 group relative p-4 mx-auto">
               <div className="hidden group-hover:block h-[29px] w-[90px]">
                   <div className="flex">
-                    <Image src={P1} alt="c"width={15} height={15}/>
-                    <Image src={P1} alt="c"width={15} height={15}/>
-                    <Image src={P1} alt="c"width={15} height={15}/>
+                    <Image src={Heart} alt="c"width={15} height={15}/>
+                    <Image src={CART} alt="c"width={15} height={15}/>
+                    <Image src={magnify} alt="c"width={15} height={15}/>
                     
                   </div>
               </div>
