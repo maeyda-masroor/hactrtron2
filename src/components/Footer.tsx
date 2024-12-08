@@ -40,7 +40,8 @@ export default function Footer(){
                 <Link href='/account'><li>My Account</li></Link>
                 <li>Discount</li>
                 <li>Returns</li>
-                <li>Order History</li>
+                <Link href='/ordercomplete'><li>Order Completed</li></Link>
+                <Link href='/payment'><li>Payment</li></Link>
                 <li>Order tracking</li>
                 <Link href='/faq'><li>FAQ's</li></Link>
             </ul>
