@@ -47,7 +47,7 @@ const Products: React.FC = () => {
       <Slider {...sliderSettings}>
           {categories.map((c) => (
             <div key={c.id}>
-              <div className="w-[269px] h-[345px] bg-white group relative">
+              <div className="w-[269px] h-[345px] bg-white group relative mx-auto">
                 <Image src={c.image} alt="c" width={225} height={225} className="p-2 rounded-full"/>
              <div className="h-auto">
               <h3 className="hover:text-pink text-gray-800">{c.title}</h3>

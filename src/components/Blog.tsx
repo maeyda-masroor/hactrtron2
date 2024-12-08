@@ -50,7 +50,7 @@ const Products: React.FC = () => {
       <Slider {...sliderSettings}>
           {blogs.map((blog) => (
             <div key={blog.id}>
-              <div className="w-[370px] h-[550px] bg-white group relative">
+              <div className="w-[370px] h-[550px] bg-white group relative mx-auto">
                 <Image src={blog.image} alt="c" width={370} height={100} className="p-2"/>
              <div className="w-[370px] h-[15px] flex gap-4">
                 <div className="flex">

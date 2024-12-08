@@ -54,7 +54,7 @@ const Products: React.FC = () => {
         <Slider {...sliderSettings}>
           {products.map((product) => (
             <div key={product.id}>
-              <div className=" bg-white shadow-md rounded-lg transition-shadow duration-300 group relative">
+              <div className=" bg-white shadow-md rounded-lg transition-shadow duration-300 group relative p-4 mx-auto">
               <div className="hidden group-hover:block h-[29px] w-[90px]">
                   <div className="flex">
                     <Image src={P1} alt="c"width={15} height={15}/>

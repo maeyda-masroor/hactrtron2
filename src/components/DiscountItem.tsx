@@ -2,9 +2,13 @@
 import TabsComponent from './TabDiscount';
 export default function Home() {
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold mb-6">Tabbed Navigation</h1>
-      <TabsComponent />
+    <section className="space-y-4 lg:pr-56 lg:pl-56 pt-20 sm:pr-20 sm:pl-20 mx-auto">
+    <div className="text-center">
+        <h1 className="text-3xl font-semibold">Discounted Items</h1>
     </div>
+    <div>
+    <TabsComponent />
+    </div>
+    </section>
   );
 }

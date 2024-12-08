@@ -21,6 +21,7 @@ const config: Config = {
         pink:'#FB2E86',
         green:'#08D15F',
         blue:'#2F1AC4',
+        lightpink:'#FFF6FB',
         gradientLeft: '#8e24aa',
         gradientRight: '#1e88e5',
       },

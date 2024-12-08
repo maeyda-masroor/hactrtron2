@@ -1,75 +1,169 @@
 "use client"
-import React, { useState } from "react";
-
+import React from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+import Image from "next/image";
+import Sale from '../public/Group 153.png';
+import wish from '../public/Group 162.png';
+import cart from '../public/Group 27.png';
+import magnify from '../public/Group 28.png';
 type Product = {
   id: number;
   name: string;
-  description: string;
+  discount:number
   price: string;
+  image:string
 };
-
 const products: Product[] = [
-  { id: 1, name: "Product 1", description: "Description for Product 1", price: "$20" },
-  { id: 2, name: "Product 2", description: "Description for Product 2", price: "$30" },
-  { id: 3, name: "Product 3", description: "Description for Product 3", price: "$40" },
-  { id: 4, name: "Product 4", description: "Description for Product 4", price: "$50" },
-  { id: 5, name: "Product 5", description: "Description for Product 5", price: "$60" },
-  { id: 6, name: "Product 6", description: "Description for Product 6", price: "$70" },
+  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
+  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
+  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
+  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
+  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
+  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
+  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' }
+  
 ];
-
-const TabsWithProducts: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("tab1");
-
-  const handleTabClick = (tab: string) => {
-    setActiveTab(tab);
-  };
-
+const TabbedGrid = () => {
   return (
-    <section className="space-y-4 pr-56 pl-56 pt-20">
-        <div className="text-center">
-        <h1 className="text-3xl font-semibold">Latest Products</h1>
-      </div>  
-      {/* Tab Links */}
-      <div className="flex space-x-4 mb-6">
-        <button
-          className={`py-2 px-4 rounded-md text-lg ${activeTab === "tab1" ? "bg-blue-500 text-white" : "bg-gray-200"}`}
-          onClick={() => handleTabClick("tab1")}
-        >
-          Tab 1
-        </button>
-        <button
-          className={`py-2 px-4 rounded-md text-lg ${activeTab === "tab2" ? "bg-blue-500 text-white" : "bg-gray-200"}`}
-          onClick={() => handleTabClick("tab2")}
-        >
-          Tab 2
-        </button>
-      </div>
-      {/* Product Grid */}
-      {activeTab === "tab1" && (
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-4">
-          {products.map((product) => (
-            <div key={product.id} className="p-4 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow">
-              <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
-              <p className="text-gray-600 mb-4">{product.description}</p>
-              <p className="text-blue-500 font-bold">{product.price}</p>
+    <section className="space-y-4 lg:pr-56 lg:pl-56 pt-20">
+    <div className="text-center">
+    <h1 className="text-3xl font-semibold">Latest Products</h1>
+  </div>  
+    <div className="">
+    <Tabs className="">
+      {/* Tab List */}
+      <TabList className="flex space-x-2 justify-center">
+      <Tab className="px-4 py-2 text-gray-500 hover:text-pink cursor-pointer selected:bg-pink selected:text-black selected:text-pink">
+          New Arrival
+        </Tab>
+        <Tab className="px-4 py-2 text-gray-500 hover:text-pink cursor-pointer selected:bg-pink selected:text-black selected:text-pink">
+          Best Seller
+        </Tab>
+        <Tab className="px-4 py-2 text-gray-500 hover:text-pink cursor-pointer selected:bg-pink selected:text-black selected:text-pink">
+          Featured
+        </Tab>
+        <Tab className="px-4 py-2 text-gray-500 hover:text-pink cursor-pointer selected:bg-pink selected:text-black selected:text-pink">
+          Special Offer
+        </Tab>
+      </TabList>
+      {/* Tab 1 */}
+      <TabPanel>
+        <div className="overflow-x-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4">
+            {/* Items for Tab 1 */}
+            {products.map((product) => (
+            <div key={product.id}>
+              <div className=" shadow-md rounded-lg transition-shadow duration-300 group relative mx-auto">
+                <div className="w-[270px] h-[350px]  p-4">
+                <div className="flex">
+                <div className="hidden group-hover:block h-[29px] w-[90px]">
+                <div className="">
+                    <Image src={cart} alt="c"width={50} height={50}/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <Image src={wish} alt="c"width={15} height={15}/>
+                    <Image src={cart} alt="c"width={15} height={15}/>
+                    <Image src={magnify} alt="x" width={15} height={15}/>
+                </div>
+                </div>
+                <div className="">
+                <Image src={product.image} width={247} height={244} alt="x"/>
+                </div>
+                </div>
+                <div className="flex gap-10">
+                <h3 className="text-lg font-semibold mb-2 text-pink text-center">{product.name}</h3>
+                <p className="text-gray-600 mb-2 text-center">{product.price}<del className="text-gray-400">{product.discount}</del></p>
+                </div>
+                <div className="hover:bg-blue">
+              </div>
+              </div>
+            </div>
             </div>
           ))}
-        </div>
-      )}
 
-      {activeTab === "tab2" && (
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-4">
+          {/* Additional Items (will be scrollable) */}
+        </div>
+        </div>
+      </TabPanel>
+
+      {/* Tab 2 */}
+      <TabPanel>
+        <div className="overflow-x-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4">
           {products.map((product) => (
-            <div key={product.id} className="p-4 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow">
-              <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
-              <p className="text-gray-600 mb-4">{product.description}</p>
-              <p className="text-blue-500 font-bold">{product.price}</p>
+            <div key={product.id}>
+              <div className=" shadow-md rounded-lg transition-shadow duration-300 group relative">
+                <div className="w-[270px] h-[350px]  p-4">
+                <Image src={product.image} width={247} height={244} alt="x"/>
+                <div className="flex gap-10">
+                <h3 className="text-lg font-semibold mb-2 text-pink text-center">{product.name}</h3>
+                <p className="text-gray-600 mb-2 text-center">{product.price}<del className="text-gray-400">{product.discount}</del></p>
+                </div>
+                <div className="hover:bg-blue">
+                </div>
+              </div>
+              </div>
             </div>
           ))}
+
+          </div>
+          </div>
+      </TabPanel>
+
+      {/* Tab 3 */}
+      <TabPanel>
+        <div className="overflow-x-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4">
+            {/* Items for Tab 3 */}
+            {products.map((product) => (
+            <div key={product.id}>
+              <div className=" shadow-md rounded-lg transition-shadow duration-300 group relative">
+                <div className="w-[270px] h-[350px]  p-4">
+                <Image src={product.image} width={247} height={244} alt="x"/>
+                <div className="flex gap-10">
+                <h3 className="text-lg font-semibold mb-2 text-pink text-center">{product.name}</h3>
+                <p className="text-gray-600 mb-2 text-center">{product.price}<del className="text-gray-400">{product.discount}</del></p>
+                </div>
+                <div className="hover:bg-blue">
+                </div>
+              </div>
+              </div>
+            </div>
+          ))} 
+          </div>
         </div>
-      )}
+      </TabPanel>
+      <TabPanel>
+        <div className="overflow-x-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4">
+            {/* Items for Tab 3 */}
+            {products.map((product) => (
+            <div key={product.id}>
+              <div className=" shadow-md rounded-lg transition-shadow duration-300 group relative">
+                <div className="w-[270px] h-[350px]  p-4">
+                <Image src={product.image} width={247} height={244} alt="x"/>
+                <div className="flex gap-10">
+                <h3 className="text-lg font-semibold mb-2 text-pink text-center">{product.name}</h3>
+                <p className="text-gray-600 mb-2 text-center">{product.price}<del className="text-gray-400">{product.discount}</del></p>
+                </div>
+                <div className="hover:bg-blue">
+                </div>
+              </div>
+              </div>
+            </div>
+          ))} 
+          </div>
+        </div>
+      </TabPanel>
+    
+    </Tabs>
+    </div>
     </section>
   );
 };
 
-export default TabsWithProducts;
+export default TabbedGrid;
