@@ -1,24 +1,28 @@
 "use client"
-// components/Products.tsx
-"use client";
 
 import React from "react";
 import Slider from "react-slick"; // Import react-slick
 import "slick-carousel/slick/slick.css"; // Import Slick CSS
 import "slick-carousel/slick/slick-theme.css"; // Import Slick Theme
-
+import Image from "next/image";
+import P1 from '../public/image 1.png';
 type Product = {
   id: number;
   name: string;
-  description: string;
+  code: string;
   price: string;
+  image:string
 };
 
 const products: Product[] = [
-  { id: 1, name: "Product 1", description: "Description for Product 1", price: "$20" },
-  { id: 2, name: "Product 2", description: "Description for Product 2", price: "$30" },
-  { id: 3, name: "Product 3", description: "Description for Product 3", price: "$40" },
-  { id: 4, name: "Product 4", description: "Description for Product 4", price: "$50" },
+  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , code : '1235' ,price :'$30' },
+  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , code : '1235' ,price :'$30' },
+  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , code : '1235' ,price :'$30' },
+  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , code : '1235' ,price :'$30' },
+  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , code : '1235' ,price :'$30' },
+  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , code : '1235' ,price :'$30' },
+  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , code : '1235' ,price :'$30' }
+  
 ];
 
 const Products: React.FC = () => {
@@ -27,7 +31,8 @@ const Products: React.FC = () => {
     infinite: true, // Infinite scrolling
     speed: 500, // Transition speed
     slidesToShow: 4, // Default slides visible
-    slidesToScroll: 1, // Scroll one slide at a time
+    slidesToScroll: 1,
+     // Scroll one slide at a time
     responsive: [
       {
         breakpoint: 1024, // lg and below
@@ -40,26 +45,42 @@ const Products: React.FC = () => {
   };
 
   return (
-    <section className="p-4">
+    <section className="space-y-4 lg:pr-56 lg:pl-56 pt-20">
+        <div className="text-center">
+        <h1 className="text-3xl font-semibold">Featured Products</h1>
+      </div>
       {/* Slick Carousel */}
-      <div className="lg:block">
+      <div className="lg:block pt-10">
         <Slider {...sliderSettings}>
           {products.map((product) => (
             <div key={product.id}>
-              <div className="p-4 bg-white shadow-md rounded-lg hover:shadow-lg transition-shadow duration-300">
-                <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
-                <p className="text-gray-600 mb-4">{product.description}</p>
-                <p className="text-blue-500 font-bold">{product.price}</p>
+              <div className=" bg-white shadow-md rounded-lg transition-shadow duration-300 group relative">
+              <div className="hidden group-hover:block h-[29px] w-[90px]">
+                  <div className="flex">
+                    <Image src={P1} alt="c"width={15} height={15}/>
+                    <Image src={P1} alt="c"width={15} height={15}/>
+                    <Image src={P1} alt="c"width={15} height={15}/>
+                    
+                  </div>
+              </div>
+                <div className="w-[270px] h-[236px] bg-gray-300 p-4">
+                <Image src={product.image} width={178} height={178} alt="x"/>
+                <div className="hidden group-hover:block h-[29px] w-[94px] bg-green pl-1 pr-1 text-xs p-2 mt-3 ml-3">
+                  View Details
+                </div>
+                </div>
+                <div className="hover:bg-blue">
+                <h3 className="text-lg font-semibold mb-2 text-pink text-center">{product.name}</h3>
+                <p className="text-gray-600 mb-2 text-center">Code:{product.code}</p>
+                <p className="text-gray-600 mb-2 text-center font-bold">{product.price}</p>
+                </div>
               </div>
             </div>
           ))}
         </Slider>
 
         {/* Decorative Ellipsis Below */}
-        <div className="mt-4 text-center text-gray-500 text-2xl font-bold">
-          ...
-        </div>
-      </div>
+       </div>
     </section>
   );
 };

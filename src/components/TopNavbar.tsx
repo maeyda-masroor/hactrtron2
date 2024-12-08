@@ -1,28 +1,49 @@
-export default function Navbar() {
-    return (
-      <nav className="bg-blue-500 p-4">
-        <div
-          className="
-            grid 
-            grid-cols-1 gap-4
-            lg:grid-cols-2 lg:gap-8
-          "
-        >
-          {/* First List */}
-          <ul className="flex flex-row space-x-4 bg-blue-700 p-4 rounded-lg text-white">
-            <li>List 1 - Item 1</li>
-            <li>List 1 - Item 2</li>
-            <li>List 1 - Item 3</li>
-          </ul>
-  
-          {/* Second List */}
-          <ul className="flex flex-row space-x-4 bg-blue-700 p-4 rounded-lg text-white">
-            <li>List 2 - Item 1</li>
-            <li>List 2 - Item 2</li>
-            <li>List 2 - Item 3</li>
+import Image from "next/image";
+import EMAIL from '../public/uil_envelope-alt.png';
+import PHONE from '../public/bx_bx-phone-call.png';
+export default function TopHeader() {
+  return (
+    <header className="w-full bg-violet lg:pl-56 lg:pr-56">
+      <div className=" grid 
+          grid-cols-1 gap-4
+          lg:grid-cols-2 lg:gap-8">
+        {/* First div with two items inline */}
+       <div className="flex">
+        {/* Second List or content (can be anything else) */}
+        <ul className="text-white flex gap-7">
+          <li className="flex items-center">
+            <span className="mr-2"><Image src={EMAIL} alt="email" width={25} height={25}/></span>
+            mhhasanul@gmail.com
+          </li>
+          <li className="py-2 flex items-center">
+            <span className="mr-2"><Image src={PHONE} alt="phone" width={25} height={25}/> </span>
+            (12345)67890
+          </li>
+        </ul>
+      </div>
+      <div className="flex">
+        {/* Second List or content (can be anything else) */}
+        <div className="text-white flex gap-7">
+          <select className=" bg-violet items-center">
+              <option className="border-1">English</option>
+          </select>
+          <select className=" bg-violet items-center">
+              <option className="border-1">USD</option>
+          </select>
+          <ul className="flex text-white">
+          <li className="py-2 flex items-center">
+            <span className="mr-2"><Image src={PHONE} alt="phone" width={25} height={25}/> </span>
+            Login
+          </li>
+          <li className="py-2 flex items-center">
+            <span className="mr-2"><Image src={PHONE} alt="phone" width={25} height={25}/> </span>
+            Wishlist
+          </li>
+          <li><Image src={PHONE} alt="phone" width={25} height={25}/></li>
           </ul>
         </div>
-      </nav>
-    );
-  }
-  
+      </div>
+      </div>
+    </header>
+  );
+}
