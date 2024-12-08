@@ -1,21 +1,27 @@
+"use client"
 import Link from "next/link";
+import { useState } from "react";
+import Image from "next/image";
 interface Item {
     id: number;
     name: string;
     image:string;
     quantity:number;
     total:number
-    price:string;
+    price:number;
 }
 const items: Item[] = [
-    { id: 1, name: "Item 1" ,image:'https://via.placeholder.com/150' ,price:'20' ,quantity:12,total:12},
-    { id: 2, name: "Item 2" ,image:"https://via.placeholder.com/150",price:'50',quantity:12,total:12},
-    { id: 3, name: "Item 3" ,image:"https://via.placeholder.com/150",price:'40',quantity:12,total:13},
-    { id: 4, name: "Item 4" ,image:"https://via.placeholder.com/150",price:'20',quantity:12,total:15},
-    { id: 5, name: "Item 5" ,image:"https://via.placeholder.com/150",price:'10',quantity:12,total:15},
+    { id: 1, name: "Item 1" ,image:'https://via.placeholder.com/150' ,price:20 ,quantity:12,total:12},
+    { id: 2, name: "Item 2" ,image:"https://via.placeholder.com/150",price:50,quantity:12,total:12},
+    { id: 3, name: "Item 3" ,image:"https://via.placeholder.com/150",price:40,quantity:12,total:13},
+    { id: 4, name: "Item 4" ,image:"https://via.placeholder.com/150",price:20,quantity:12,total:15},
+    { id: 5, name: "Item 5" ,image:"https://via.placeholder.com/150",price:10,quantity:12,total:15},
   ];
 
 export default function ResponsiveGrid() {
+  const [quantity, setQuantity] = useState<number>(0);
+  const [price, setPrice] = useState<number>(0);
+  const [total, setTotal] = useState<number>(0);
     return (
         <div className="lg:pl-45 lg:pr-45"> 
         <div className="mx-auto w-full  bg-lightpurple">
@@ -38,8 +44,7 @@ export default function ResponsiveGrid() {
       {/* First Div */}
       <div className="col-span-1 sm:col-span-1 lg:col-span-3  p-20 text-black">
       <div className="overflow-x-auto">
-      <table className="min-w-full  text-sm text-left text-gray-500">
-        {/* Table Header */}
+      {/*<table className="min-w-full  text-sm text-left text-gray-500">
         <thead className="bg-gray-50 text-gray-700 text-xs uppercase">
           <tr>
             <th scope="col" className="px-4 py-2 border-b">Product</th>
@@ -49,7 +54,6 @@ export default function ResponsiveGrid() {
           </tr>
         </thead>
 
-        {/* Table Body */}
         <tbody>
           {items.map((row, index) => (
             <tr key={index} className="mt-10">
@@ -60,7 +64,56 @@ export default function ResponsiveGrid() {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table>*/}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 p-2 lg:p-6">
+      <div className="p-4">
+        <div className="h-auto"> Product</div>
+        <div className="h-auto">{items.map((item) => (
+        <div
+          key={item.id}
+          className="p-4 mb-2 bg-blue-500 text-black rounded-md shadow"
+        >
+            <div className="flex gap-2">
+            <div>
+            <Image src={item.image} alt="c" width={64} height={71}/>
+            </div>
+            <div className="w-[200px] h-[33px]">
+            <h1 className="text-sm">{item.name}</h1>
+            <p className="text-sm">{item.price}</p>
+            </div>            
+            </div>
+        </div>
+      ))}</div>
+      </div>
+      <div className="p-4"><div>Price</div>
+      <div>{items.map((item)=>(
+       <div
+       key={item.id}
+       className="p-4 mb-2 bg-blue-500 text-black rounded-md shadow"
+     > {item.price}</div>
+      ))}</div>
+      
+      </div>
+      <div className="p-4">
+        <div className="">Qunantity</div>
+        <div>{items.map((item)=>(
+       <div
+       key={item.id}
+       className="p-4 mb-2 bg-blue-500 text-black rounded-md shadow"
+     > {item.quantity}</div>
+      ))}</div>
+      </div>
+      <div className="p-4"><div>Total</div>
+      <div> <div>{items.map((item)=>(
+       <div
+       key={item.id}
+       className="p-4 mb-2 bg-blue-500 text-black rounded-md shadow"
+     > {item.quantity*item.price}</div>
+      ))}</div>
+      </div>
+      </div>
+      </div>
+
     <div className="flex gap-60 mt-10">
     <button 
         type="submit" 
@@ -159,7 +212,7 @@ export default function ResponsiveGrid() {
         </div>
       </div>
     </div>
-        </div>
+    </div>
     );
   }
   
