@@ -8,6 +8,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Sponser from "@/components/Sponser";
 import StarRating from "@/components/StarRating";
+import Share from '../../../../../public/Group 205.png';
 export default function ProductPage({
   params,
 }: {
@@ -69,8 +70,7 @@ export default function ProductPage({
     <p>Tags</p>
     <div className="flex">
       <h1 className="text-black">share</h1>
-      <div className="flex"><Image src={facebook} alt="x" width={50} height={50}/>
-      <Image src={facebook} alt="x" width={50} height={50}/>
+      <div className="flex"><Image src={Share} alt="x" width={50} height={50}/>
       </div>
 
     </div>

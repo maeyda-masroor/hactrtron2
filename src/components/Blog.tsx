@@ -15,12 +15,12 @@ type Blog = {
   desc:string
 };
 const blogs: Blog[] = [
-    { id:1 ,author:'author1' , date:'12th Aug 2023', title:'Blog title 1', image: "https://via.placeholder.com/150" , desc:'this is blog for products'},
-    { id:2 ,author:'author1' , date:'12th Aug 2023', title:'Blog title 1', image: "https://via.placeholder.com/150" , desc:'this is blog for products'},
-    { id:3 ,author:'author1' , date:'12th Aug 2023', title:'Blog title 1', image: "https://via.placeholder.com/150" , desc:'this is blog for products'},
-    { id:4 ,author:'author1' , date:'12th Aug 2023', title:'Blog title 1', image: "https://via.placeholder.com/150" , desc:'this is blog for products'},
-    { id:5 ,author:'author1' , date:'12th Aug 2023', title:'Blog title 1', image: "https://via.placeholder.com/150" , desc:'this is blog for products'},
-    { id:6 ,author:'author1' , date:'12th Aug 2023', title:'Blog title 1', image: "https://via.placeholder.com/150" , desc:'this is blog for products'},
+    { id:1 ,author:'Sober Ali' , date:'12th Aug 2023', title:'Top essential trends in 2021', image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734666161/Ecommerce/blog/Rectangle_126_gyzl6g.png" , desc:'More off this less hello samlande lied much over tightly circa horse taped mightly'},
+    { id:2 ,author:'Sober Ali' , date:'12th Aug 2023', title:'Top essential trends in 2021', image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734666161/Ecommerce/blog/Rectangle_126_3_shwd1c.png" , desc:'More off this less hello samlande lied much over tightly circa horse taped mightly'},
+    { id:3 ,author:'Sober Ali' , date:'12th Aug 2023', title:'Top essential trends in 2021', image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734666161/Ecommerce/blog/Rectangle_126_1_sz3iug.png" , desc:'More off this less hello samlande lied muchover tightly circa horse taped mightly'},
+    { id:4 ,author:'Sober Ali' , date:'12th Aug 2023', title:'Top essential trends in 2021', image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734666161/Ecommerce/blog/Rectangle_126_2_dmc6hi.png" , desc:'More off this less hello samlande lied muchover tightly circa horse taped mightly'},
+    { id:5 ,author:'Sober Ali' , date:'12th Aug 2023', title:'Top essential trends in 2021', image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734662664/Ecommerce/blog/Rectangle_32_ajcezd.png" , desc:'More off this less hello samlande lied much over tightly circa horse taped mightly'},
+    { id:6 ,author:'Sober Ali' , date:'12th Aug 2023', title:'Top essential trends in 2021', image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734662664/Ecommerce/blog/Rectangle_32_ajcezd.png" , desc:'More off this less hello samlande lied muchover tightly circa horse taped mightly'},
     
 ];
 const Products: React.FC = () => {
@@ -65,7 +65,7 @@ const Products: React.FC = () => {
              <div className="h-auto">
               <h3 className="hover:text-pink text-gray-800">{blog.title}</h3>
               <p className="text-black">{blog.desc}</p>
-              <Link href={`/blog/${blog.id}`}>
+              <Link href={`/Blog/${blog.id}`}>
                 <button className="underline decoration-2 decoration-blue">Read More</button>
               </Link>
              </div>

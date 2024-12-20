@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import SEARCH from '../public/uil_envelope-alt.png';
+import Search from '../public/uil_search-plus.png';
 export default function Navbar() {
     return (
-      <nav className="bg-white lg:pl-56 lg:pr-56 p-4">
+      <nav className="bg-white lg:pl-56 lg:pr-56 p-4 overflow-x-hidden">
         <div
           className="
             grid
@@ -27,12 +27,21 @@ export default function Navbar() {
           </ul>
           {/* Search Bar */}
           <div className="search-bar flex justify-center lg:justify-end">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="p-2 rounded-md text-black w-full lg:w-1/2 border-2 border-gray-300"
-            />
-          </div>
+            
+          <div className="relative w-full lg:w-1/2">
+          {/* Icon */}
+          <span className="absolute inset-y-0 left-2 flex items-center bg-pink">
+            <Image src={Search} alt="X"/>
+          </span>
+
+          {/* Input */}
+          <input
+            type="text"
+            placeholder="Search..."
+            className=" pl-6 rounded-none text-black w-full border-2 border-gray-300"
+          />
+        </div>
+        </div>
         </div>
       </nav>
     );

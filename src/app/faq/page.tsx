@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Sponser from "../../components/Sponser";
 export default function FAQ(){
-    return <div className="lg:pl-56 lg:pr-56"> 
-    <div className="mx-auto w-full  bg-lightpurple">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4   p-2">
+    return  <div className="lg:pl-45 lg:pr-45"> 
+    <div className="mx-auto w-full  bg-lightpurple p-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4   p-10">
       <nav className="text-sm">
-      <h1 className="text-6xl text-black">FAQ</h1>
+      <h1 className="text-6xl text-black">Hackto Demo</h1>
         <ol className="flex space-x-2">
           <li>
             <Link href="/" className="text-blue-500 hover:text-blue-700">Home</Link>
@@ -16,9 +16,9 @@ export default function FAQ(){
           </li>
         </ol>
       </nav>
-    </div>    
-  </div>
-  <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4   p-2 mx-auto">
+    </div> 
+    </div>
+  <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4   p-20 mx-auto">
         <div className="p-2">
             <h1 className="text-4xl text-black">General Information</h1> 
             <br/>
@@ -44,7 +44,7 @@ export default function FAQ(){
             <br/>
             <div className="max-w-lg  p-6 border mx-auto">
         <form action="#" method="POST">
-    <div className="mb-4">
+    <div className="mb-4 p-4">
       <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
       <input 
         type="text" 

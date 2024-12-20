@@ -1,7 +1,7 @@
 //Footer using 4grid when on lg ,xl , 2xl and 1 col when on sm,md
 import Link from "next/link"
 export default function Footer(){
-    return <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-4 mt-20 bg-lightpurple lg:pr-10 lg:pl-10">
+    return <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-4 mt-20 bg-lightpurple lg:pr-10 lg:pl-10 overflow-x-hidden">
         <div className="h-auto p-4 text-black">
             <h1 className="text-6xl">Hekto</h1>
             <div className="flex items-center space-x-2 border border-gray-300 p-2 rounded-lg w-[270px] h-[44px]">

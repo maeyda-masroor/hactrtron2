@@ -40,7 +40,7 @@ const Products: React.FC = () => {
       ],
     };
   return (
-    <section className="space-y-4 lg:pr-56 lg:pl-56 pt-20 sm:pr-20 sm:pl-20">
+    <section className="space-y-4 lg:pr-56 lg:pl-56 pt-20 sm:pr-20 sm:pl-20 overflow-x-hidden">
         <div className="text-center">
         <h1 className="text-3xl font-semibold">Top Categories</h1>
       </div>

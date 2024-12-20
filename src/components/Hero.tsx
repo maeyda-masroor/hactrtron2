@@ -9,8 +9,9 @@ export default function HeroSection() {
           lg:grid 
           grid-cols-2 
           bg-lightpurple
-          pr-56 pl-56
+          pr-46 pl-46
           h-[764px]
+          overflow-x-hidden
         "
       >
         {/* Column 1 */}

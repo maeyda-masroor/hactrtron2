@@ -2,7 +2,9 @@
 import StarRating from "@/components/StarRating";
 import Link from "next/link";
 import Image from "next/image";
-import Wish from '../../../public/image 1162.png';
+import Wish from '../../../public/Group 28.png';
+import Heart from '../../../public/uil_heart-alt.png';
+import Magnify from '../../../public/uil_search-plus.png';
 import  dummyData  from "../../data/dummydata"; // import the dummy data
 import { useState } from "react";
 export default function CategoryPage({ params }: { params: { id: string } }) {
@@ -161,8 +163,8 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
           </div>
           <div className="flex">
             <Image src={Wish} alt="c" height={50} width={50}/>
-            <Image src={Wish} alt="c" height={50} width={50}/>
-            <Image src={Wish} alt="c" height={50} width={50}/>
+            <Image src={Heart} alt="c" height={50} width={50}/>
+            <Image src={Magnify} alt="c" height={50} width={50}/>
           </div>
           </div>
         </div>

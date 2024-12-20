@@ -18,13 +18,13 @@ type Product = {
 };
 
 const products: Product[] = [
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , code : '1235' ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , code : '1235' ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , code : '1235' ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , code : '1235' ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , code : '1235' ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , code : '1235' ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , code : '1235' ,price :'$30' }
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611816/Ecommerce/featuredProducts/image_1168_o3tmx4.png" , name:'Cantilever chair' , code : 'Y523201' ,price :'$42' },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611815/Ecommerce/featuredProducts/image_3_ta4vza.png" , name:'Cantilever chair' , code : 'Y523201' ,price :'$42' },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611815/Ecommerce/featuredProducts/image_1_eumvir.png" , name:'Cantilever chair' , code : 'Y523201' ,price :'$30' },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611815/Ecommerce/featuredProducts/image_1_eumvir.png" , name:'Cantilever chair' , code : 'Y523201' ,price :'$30' },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611815/Ecommerce/featuredProducts/image_1_eumvir.png" , name:'Cantilever chair' , code : 'Y523201' ,price :'$30' },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611815/Ecommerce/featuredProducts/image_1_eumvir.png" , name:'Cantilever chair' , code : 'Y523020' ,price :'$30' },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611815/Ecommerce/featuredProducts/image_1_eumvir.png" , name:'Cantilever chair' , code : 'Y5202301' ,price :'$30' }
   
 ];
 
@@ -48,7 +48,7 @@ const Products: React.FC = () => {
   };
 
   return (
-    <section className="space-y-4 lg:pr-56 lg:pl-56 pt-20">
+    <section className="space-y-4 lg:pr-56 lg:pl-56 pt-20 overflow-x-hidden">
         <div className="text-center">
         <h1 className="text-3xl font-semibold">Featured Products</h1>
       </div>
@@ -72,7 +72,7 @@ const Products: React.FC = () => {
                   View Details
                 </div>
                 </div>
-                <div className="hover:bg-blue">
+                <div className="hover:bg-blue hover:text-white">
                 <h3 className="text-lg font-semibold mb-2 text-pink text-center">{product.name}</h3>
                 <p className="text-gray-600 mb-2 text-center">Code:{product.code}</p>
                 <p className="text-gray-600 mb-2 text-center font-bold">{product.price}</p>

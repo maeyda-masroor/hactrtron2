@@ -9,19 +9,19 @@ import P1 from '../public/image 1.png';
 type Product = {
   id: number;
   name: string;
-  discount:number
-  price: string;
+  discount:number;
+  price: number;
   image:string
 };
 
 const products: Product[] = [
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' }
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734612124/Ecommerce/trendingproducts/image_1171_fquapa.png" , name:'Cantilever chair' , discount : 35 ,price :46 },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734612124/Ecommerce/trendingproducts/image_1169_oq3wro.png" , name:'Cantilever chair' , discount : 35 ,price :46 },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734612123/Ecommerce/trendingproducts/image_1168_nqyulx.png" , name:'Cantilever chair' , discount : 35 ,price :46 },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734612037/Ecommerce/trendingproducts/box_for_image_2_xb73so.png" , name:'Cantilever chair' , discount : 35 ,price :46 },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734612037/Ecommerce/trendingproducts/box_for_image_dcfg3l.png" , name:'Cantilever chair' , discount : 35 ,price :46 },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734612037/Ecommerce/trendingproducts/box_for_image_dcfg3l.png" , name:'Cantilever chair' , discount : 35 ,price :46 },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734612036/Ecommerce/trendingproducts/box_for_image_1_zyjdgx.png" , name:'Cantilever chair' , discount : 35 ,price :46 }
   
 ];
 
@@ -44,7 +44,7 @@ export default function TrendingProduct(){
         ],
       };
       return ( 
-      <div className="lg:block pt-10">
+      <div className="lg:block pt-10 overflow-x-hidden">
         <Slider {...sliderSettings}>
           {products.map((product) => (
             <div key={product.id}>

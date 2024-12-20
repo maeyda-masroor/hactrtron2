@@ -12,11 +12,11 @@ interface Item {
 
 const DiscountAd: React.FC = () => {
     const items: Item[] = [
-        { id: 1, name: "Item 1" ,image:'https://via.placeholder.com/150' ,price:'20'},
-        { id: 2, name: "Item 2" ,image:"https://via.placeholder.com/150",price:'50'},
-        { id: 3, name: "Item 3" ,image:"https://via.placeholder.com/150",price:'40'},
-        { id: 4, name: "Item 4" ,image:"https://via.placeholder.com/150",price:'20'},
-        { id: 5, name: "Item 5" ,image:"https://via.placeholder.com/150",price:'10'},
+        { id: 1, name: "Executive Seat Chair" ,image:'https://res.cloudinary.com/di1kessdw/image/upload/v1734611960/Ecommerce/latestproducts/image_1_s2gxzm.png' ,price:'20'},
+        { id: 2, name: "Executive Seat Chair" ,image:"https://res.cloudinary.com/di1kessdw/image/upload/v1734611960/Ecommerce/latestproducts/image_1_s2gxzm.png",price:'50'},
+        { id: 3, name: "Executive Seat Chair" ,image:"https://res.cloudinary.com/di1kessdw/image/upload/v1734611960/Ecommerce/latestproducts/image_1_s2gxzm.png",price:'40'},
+        { id: 4, name: "Executive Seat Chair" ,image:"https://res.cloudinary.com/di1kessdw/image/upload/v1734611960/Ecommerce/latestproducts/image_1_s2gxzm.png",price:'20'},
+        { id: 5, name: "Executive Seat Chair" ,image:"https://res.cloudinary.com/di1kessdw/image/upload/v1734611960/Ecommerce/latestproducts/image_1_s2gxzm.png",price:'10'},
       ];
     return (
       <div className="grid grid-cols-3 gap-4 mt-20">

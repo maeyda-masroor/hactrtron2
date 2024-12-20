@@ -19,7 +19,7 @@ export default function Contact(){
       </nav>
     </div> 
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4  mx-auto mt-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4  mx-auto mt-10 overflow-x-hidden">
         <div className="p-10">
             <h2 className="text-2xl">Information About us</h2>
             <p className="text-lg text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis neque ultrices mattis aliquam, malesuada diam est. Malesuada sem tristique amet erat vitae eget dolor lobortis. Accumsan faucibus vitae lobortis quis bibendum quam.</p>

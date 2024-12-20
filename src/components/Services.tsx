@@ -4,7 +4,7 @@ import s2 from '../public/free-delivery 1.png';
 import s3 from '../public/cashback 1.png';
 import s4 from '../public/email-open-svgrepo-com.svg';
 export default function Services(){
-    return <section className="space-y-4 lg:pr-56 lg:pl-56 pt-20">
+    return <section className="space-y-4 lg:pr-56 lg:pl-56 pt-20 overflow-x-hidden">
     <div className="text-center">
     <h1 className="text-3xl font-semibold">What SHOPEX Offers!</h1>
   </div>  

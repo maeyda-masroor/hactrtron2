@@ -15,13 +15,13 @@ type Product = {
 };
 
 const products: Product[] = [
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , rating : 5 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , rating : 1 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , rating : 2 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , rating : 5 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , rating : 1 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , rating : 1 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , rating : 2 ,price :'$30' }
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611961/Ecommerce/latestproducts/image_23_aebujh.png" , name:'Men Fashion Wear' , rating : 5 ,price :'$30' },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611961/Ecommerce/latestproducts/image_1168_rqx5of.png" , name:'Women Fashions' , rating : 1 ,price :'$30' },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611960/Ecommerce/latestproducts/image_15_so7xer.png" , name:'Wolex Dummy Fashion' , rating : 2 ,price :'$30' },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611961/Ecommerce/latestproducts/image_1168_rqx5of.png" , name:'Top Welled Digital' , rating : 5 ,price :'$30' },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611961/Ecommerce/latestproducts/image_1168_rqx5of.png" , name:'Men fashion' , rating : 1 ,price :'$30' },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611960/Ecommerce/latestproducts/image_15_so7xer.png" , name:'Womens fashion' , rating : 1 ,price :'$30' },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611961/Ecommerce/latestproducts/image_23_aebujh.png" , name:'Wolex Dummy fashion' , rating : 2 ,price :'$30' }
   
 ];
 
@@ -44,7 +44,7 @@ export default function TrendingProduct(){
         ],
       };
       return ( 
-      <div className="lg:block pt-10 lg:pl-56 lg:pr-56">
+      <div className="lg:block pt-10 lg:pl-56 lg:pr-56 overflow-x-hidden">
         <Slider {...sliderSettings}>
           {products.map((product) => (
             <div key={product.id}>

@@ -38,7 +38,7 @@ export default function TabsComponent() {
                 <p><span></span>Simple neutral colours.</p>    
             </div>
             <div className ='text-xl'>
-            <p><span></span>Material expose like metals</p>
+            <p><span></span>Clear lines and geomatric figures</p>
                 <p><span></span>Simple neutral colours.</p>        
             </div>
         </div>
@@ -64,7 +64,7 @@ export default function TabsComponent() {
         </p>
         <div className='flex'>
             <div className='text-xl'>
-                <p><span></span>Material expose like metals</p>
+                <p><span></span>Simple neutral colours.</p>
                 <p><span></span>Simple neutral colours.</p>    
             </div>
             <div className ='text-xl'>

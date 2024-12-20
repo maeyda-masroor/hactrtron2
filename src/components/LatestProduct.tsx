@@ -13,23 +13,23 @@ import magnify from '../public/Group 28.png';
 type Product = {
   id: number;
   name: string;
-  discount:number
-  price: string;
+  discount:number;
+  price:number;
   image:string
 };
 const products: Product[] = [
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' },
-  { id:1 , image: "https://via.placeholder.com/150" , name:'product1' , discount : 1235 ,price :'$30' }
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611961/Ecommerce/latestproducts/image_23_aebujh.png" , name:'Comfort Handy Craft' , discount :42.00  ,price :65.00 },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611961/Ecommerce/latestproducts/image_1168_rqx5of.png" , name:'Comfort Handy Craft' , discount : 42.0 ,price :65.0 },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611961/Ecommerce/latestproducts/image_1166_d8rmhg.png" , name:'Comfort Handy Craft' , discount : 42.0 ,price :65.0 },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611961/Ecommerce/latestproducts/image_32_zvj4gu.png" , name:'Comfort Handy Craft' , discount : 42.0 ,price :65.0 },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611961/Ecommerce/latestproducts/image_1168_1_bofxwx.png" , name:'Comfort Handy Craft' , discount : 42.0 ,price :65.0},
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611960/Ecommerce/latestproducts/image_3_1_iggmlz.png" , name:'Comfort Handy Craft' , discount : 42.0 ,price :65.0 },
+  { id:1 , image: "https://res.cloudinary.com/di1kessdw/image/upload/v1734611960/Ecommerce/latestproducts/image_1_s2gxzm.png" , name:'Comfort Handy Craft' , discount : 42.0 ,price :65.0 }
   
 ];
 const TabbedGrid = () => {
   return (
-    <section className="space-y-4 lg:pr-56 lg:pl-56 pt-20">
+    <section className="space-y-4 lg:pr-56 lg:pl-56 pt-20 overflow-x-hidden">
     <div className="text-center">
     <h1 className="text-3xl font-semibold">Latest Products</h1>
   </div>  
@@ -69,7 +69,7 @@ const TabbedGrid = () => {
                     <br/>
                     <br/>
                     <Image src={HEART} alt="c"width={15} height={15}/>
-                    <Image src={cart} alt="c"width={15} height={15}/>
+                    <Image src={magnify} alt="c"width={15} height={15}/>
                     <Image src={MAGNIFY} alt="x" width={15} height={15}/>
                 </div>
                 </div>
