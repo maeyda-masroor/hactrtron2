@@ -19,9 +19,10 @@ const DiscountAd: React.FC = () => {
         { id: 5, name: "Executive Seat Chair" ,image:"https://res.cloudinary.com/di1kessdw/image/upload/v1734611960/Ecommerce/latestproducts/image_1_s2gxzm.png",price:'10'},
       ];
     return (
+      <div className="flex justify-center">
       <div className="grid grid-cols-3 gap-4 mt-20">
         {/* Column 1 - 40% width */}
-        <div className="col-span-3 md:col-span-2 lg:col-span-1 bg-lightpink p-2 w-[420px] h-[250px] gap-3 ">
+        <div className="col-span-3 md:col-span-2 lg:col-span-1 bg-lightpink  w-[420px] h-[250px] gap-3 ">
           <div className="text-blue">
             <h1 className="text-lg">20% off in All Products</h1>
             <p className="underline text-pink decoration-2"><Link href='/shop'>Shop Now</Link></p>
@@ -32,7 +33,7 @@ const DiscountAd: React.FC = () => {
         </div>
   
         {/* Column 2 - 40% width */}
-        <div className="col-span-3 md:col-span-2 lg:col-span-1 bg-lightpurple p-2 w-[420px] h-[250px]">
+        <div className="col-span-3 md:col-span-2 lg:col-span-1 bg-lightpurple p-4 w-[420px] h-[250px]">
         <div className="text-blue">
             <h1 className="text-lg">23% off in All Products</h1>
             <p className="underline text-pink decoration-2"><Link href='/shop'>View Collection</Link></p>
@@ -44,7 +45,7 @@ const DiscountAd: React.FC = () => {
          </div>
   
         {/* Column 3 - 20% width, hidden on sm and md */}
-        <div className="hidden lg:block lg:col-span-1 text-black p-2 h-[250px] w-[267px] overflow-y-auto">
+        <div className="hidden lg:block lg:col-span-1 text-black lg:pl-24 h-[250px] w-[267px] overflow-y-auto">
         {items.map((item) => (
         <div
           key={item.id}
@@ -63,6 +64,7 @@ const DiscountAd: React.FC = () => {
       ))}
 
         </div>
+      </div>
       </div>
     );
   }

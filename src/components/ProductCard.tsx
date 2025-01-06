@@ -41,6 +41,20 @@ export default function TrendingProduct(){
               vertical: true, // Enable vertical scrolling
             },
           },
+          {
+            breakpoint: 768, // lg and below
+            settings: {
+              slidesToShow: 1, // Show 1 slide
+              vertical: true, // Enable vertical scrolling
+            },
+          },
+          {
+            breakpoint: 640, // md and below
+            settings: {
+              slidesToShow: 1, // Show 2 slides
+              vertical: false, // Horizontal scrolling
+            },
+          },
         ],
       };
       return ( 

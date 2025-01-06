@@ -1,8 +1,8 @@
 //Footer using 4grid when on lg ,xl , 2xl and 1 col when on sm,md
 import Link from "next/link"
 export default function Footer(){
-    return <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-4 mt-20 bg-lightpurple lg:pr-10 lg:pl-10 overflow-x-hidden">
-        <div className="h-auto p-4 text-black">
+    return <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-4 mt-20 bg-lightpurple lg:pr-10 lg:pl-10  overflow-x-hidden">
+        <div className="h-auto p-10 text-black ">
             <h1 className="text-6xl">Hekto</h1>
             <div className="flex items-center space-x-2 border border-gray-300 p-2 rounded-lg w-[270px] h-[44px]">
             <input type="email" placeholder="Enter your email" className="flex-1 p-2 text-sm text-gray-700 border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
@@ -16,7 +16,7 @@ export default function Footer(){
                 <h3>17 Princess Road, London, <br/>Greater London NW1 8JR, UK</h3>
             </div>
         </div>
-        <div className="h-auto p-4 text-black">
+        <div className="h-auto p-10 text-black">
             <h3>
                 Categories
             </h3>
@@ -29,7 +29,7 @@ export default function Footer(){
                 <li>Waterproof Headphones</li>
             </ul>
         </div>
-        <div className="h-auto p-4 text-black">
+        <div className="h-auto p-10 text-black">
             <h3>
                 Customer Care
             </h3>
@@ -46,7 +46,7 @@ export default function Footer(){
                 <Link href='/faq'><li>FAQ's</li></Link>
             </ul>
         </div>
-        <div className="h-auto p-4 text-black">
+        <div className="h-auto p-10 text-black">
             <h3>
                 Pages
             </h3>
@@ -59,7 +59,5 @@ export default function Footer(){
                 <li>Order tracking</li>
             </ul>
         </div>
-        
     </div>
-    
 }

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Sofa from '../public/tortuga-01-b 1.png';
 export default function TabsComponent() {
   return (
-    <Tabs className="place-items-center">
+    <Tabs className="place-items-center overflow-x-hidden">
       {/* Tab List */}
       <TabList className="flex space-x-2">
       <Tab className="px-4 py-2 text-gray-500 hover:text-pink cursor-pointer selected:bg-pink selected:text-black selected:text-pink">
@@ -21,7 +21,7 @@ export default function TabsComponent() {
       </TabList>
 
       {/* Tab Panels */}
-      <TabPanel>
+      <TabPanel className='p-4 overflow-x-hidden'>
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-4">
         <div className='mt-7'>
         <h3 className='text-3xl'>
@@ -51,7 +51,7 @@ export default function TabsComponent() {
         </div>
       </div>
       </TabPanel>
-      <TabPanel>
+      <TabPanel className='p-4'>
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-4">
         <div className='mt-7'>
         <h3 className='text-3xl'>
@@ -81,7 +81,7 @@ export default function TabsComponent() {
         </div>
       </div>
       </TabPanel>
-      <TabPanel>
+      <TabPanel className='p-4'>
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-4">
         <div className='mt-7'>
         <h3 className='text-3xl'>
