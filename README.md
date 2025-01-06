@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+In this hacktratron i used chatgpt for responsive and design starting of with 5 break point 
+Breakpoints are sm , md , lg ,xl ,2xl ... for sm , md i choose 1 col span using grid ... for lg ,xl and 2xl i use 2 cols span .. 3 soon as need 
+i used tailwindcss so using tailwindconfig i made colour define choosing from template-4 given by teacher .. 
+starting off with Home page .. i made grid keeping padding left and right only so content remain in center . 
+where the data seem more than one we use so i use predefined array 
+On home page ... using categories ... i made dynamic route to product page containing filteration and product data ... when clicking on some product title it pass the data to detail page 
+so category -> product -> product detail 
 
-## Getting Started
+i used three libraries beside tailwindcss
+Star rating library to render star based on dynamic value ...
+react - slick for sliding product card when to show products that are more than in page defined .. like if page contains 4 product grid so if user want to add 5 product one will shown on sliding
+tab ui with custom style is also used
 
-First, run the development server:
+cart page was created
+wishlist 
+order completed page 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+some of the pages has link in footer while some are linked with top navbar and navbar
