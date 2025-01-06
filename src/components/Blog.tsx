@@ -30,13 +30,35 @@ const Products: React.FC = () => {
       speed: 500, // Transition speed
       slidesToShow: 4, // Default slides visible
       slidesToScroll: 1,
+
        // Scroll one slide at a time
       responsive: [
+        /*{
+          breakpoint: 1366, // lg and below
+          settings: {
+            slidesToShow: 2, // Show 1 slide
+            vertical: false, // Enable vertical scrolling
+          },
+        },*/
         {
           breakpoint: 1024, // lg and below
           settings: {
+            slidesToShow: 2, // Show 1 slide
+            vertical: false, // Enable vertical scrolling
+          },
+        },
+        {
+          breakpoint: 768, // lg and below
+          settings: {
             slidesToShow: 1, // Show 1 slide
             vertical: true, // Enable vertical scrolling
+          },
+        },
+        {
+          breakpoint: 640, // md and below
+          settings: {
+            slidesToShow: 1, // Show 2 slides
+            vertical: false, // Horizontal scrolling
           },
         },
       ],
@@ -46,10 +68,11 @@ const Products: React.FC = () => {
         <div className="text-center">
         <h1 className="text-3xl font-semibold">Latest Blog</h1>
       </div>
+      <div className="items-center">
       <div className="lg:block pt-10 slider-container mx-auto p-2 sm:pl-10">
       <Slider {...sliderSettings}>
           {blogs.map((blog) => (
-            <div key={blog.id}>
+            <div key={blog.id} className="flex justify-center">
               <div className="w-[370px] h-[550px] bg-white group relative mx-auto">
                 <Image src={blog.image} alt="c" width={370} height={100} className="p-2"/>
              <div className="w-[370px] h-[15px] flex gap-4">
@@ -62,7 +85,7 @@ const Products: React.FC = () => {
                   <p>{blog.date}</p>
                 </div>
              </div>
-             <div className="h-auto">
+             <div className="h-auto mx-auto">
               <h3 className="hover:text-pink text-gray-800">{blog.title}</h3>
               <p className="text-black">{blog.desc}</p>
               <Link href={`/Blog/${blog.id}`}>
@@ -74,7 +97,7 @@ const Products: React.FC = () => {
             </div>
           ))}
         </Slider>
-
+            </div>
       </div>
     </section>
 
