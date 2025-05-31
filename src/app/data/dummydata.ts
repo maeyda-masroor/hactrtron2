@@ -26,6 +26,7 @@ type Product = {
     categories: [
       {
         
+        
         id: "1",
         name: "Mini CVC Chairs",
         image:'https://res.cloudinary.com/di1kessdw/image/upload/v1734612322/Ecommerce/categories/image_1168_k7qgi2.png',
